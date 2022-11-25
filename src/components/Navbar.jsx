@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { selectLanguage } from '../Languages';
 
 const NavContainer = styled.div`
     position: fixed;
@@ -55,9 +54,11 @@ const NavContainer = styled.div`
 `
 
 export const Navbar = ({ handleClick, handleSelect, language }) => {
-
+    const selectLanguage = obj => {
+        return obj[localStorage.language]
+    }
     const { nav_text } = selectLanguage(language);
-    
+
     const [state, setState] = useState({});
 
     const handleScroll = e => {
