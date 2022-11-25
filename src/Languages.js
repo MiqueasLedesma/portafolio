@@ -33,5 +33,8 @@ export const language = {
 }
 
 export const selectLanguage = obj => {
-    return obj[localStorage.language]
-}
+    if (localStorage?.language) return obj[localStorage.language]
+    return obj.en
+};
+
+

@@ -7,6 +7,7 @@ import react_logo from '../images/react-logo.svg';
 import html_logo from '../images/html-logo.svg';
 import css_logo from '../images/css-logo.svg';
 import styled_logo from '../images/styled-logo.svg';
+import { selectLanguage } from '../Languages';
 
 
 const Box = styled.div`
@@ -84,9 +85,7 @@ const FooterContainer = styled.div`
 `
 
 export const Footer = ({ language }) => {
-    const selectLanguage = obj => {
-        return obj[localStorage.language]
-    }
+
     const { footer_text } = selectLanguage(language);
     return (
         <FooterContainer>

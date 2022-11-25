@@ -39,21 +39,13 @@ export const flipCardInfo = [
     },
 ];
 
-export const backSkill = [
-    {
-        text: 'Node.js',
-        img: node_logo
-    },
-    // {
-    //     text: 'Express.js',
-    //     img: express_logo
-    // },
-    {
-        text: 'Postgres',
-        img: postgres_logo
-    },
-    // {
-    //     text: 'Sequelize',
-    //     img: sequelize_logo
-    // }
-]
+export const myTheme = {
+    primary: '#213f6d',
+    secundary: '#ffffff',
+    textPrimary: '#e2e2e2',
+    textSecundary: '#120907',
+    backgroundPrimary: '#0e1b36',
+    backgroundSecundary: '#beceff',
+    proyectPrimary: '#124860',
+    proyectSecundary: '#f3eae8',
+  };

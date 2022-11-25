@@ -6,17 +6,8 @@ import { Presentation } from './components/Presentation';
 import { Proyects } from './components/Proyects';
 import { Skills } from './components/Skills';
 import { language } from './Languages';
+import { myTheme } from './StaticConst';
 
-export const myTheme = {
-  primary: '#213f6d',
-  secundary: '#ffffff',
-  textPrimary: '#e2e2e2',
-  textSecundary: '#120907',
-  backgroundPrimary: '#0e1b36',
-  backgroundSecundary: '#beceff',
-  proyectPrimary: '#124860',
-  proyectSecundary: '#f3eae8',
-};
 
 const AppContainer = styled.div`
   background-color: ${props => localStorage.theme !== 'primary' ? props.theme.backgroundSecundary : props.theme.backgroundPrimary};
@@ -28,10 +19,13 @@ function App() {
   const [lang, setLanguage] = useState(localStorage.language);
 
   useEffect(() => {
-    let haveTheme = () => !state && localStorage.setItem('theme', 'primary');
-    haveTheme();
-    let haveLanguage = () => !language && localStorage.setItem('language', 'en');
-    haveLanguage();
+
+    const setLocalStorage = () => {
+      !state && localStorage.setItem('theme', 'primary');
+      !lang && localStorage.setItem('language', 'en');
+    }
+    setLocalStorage();
+
   }, [state, lang]);
 
   const handleClick = e => {

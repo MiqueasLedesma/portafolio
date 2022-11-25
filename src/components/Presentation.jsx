@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { selectLanguage } from '../Languages';
 
 const BodyContainer = styled.div`
     display: flex;
@@ -16,10 +17,7 @@ const BodyContainer = styled.div`
 `
 
 export const Presentation = ({ language }) => {
-    const selectLanguage = obj => {
-        return obj[localStorage.language]
-    }
-    const { body_text } = selectLanguage(language);
+    const { body_text } = selectLanguage(language)
     return (
         <BodyContainer>
             <div className='box'>
