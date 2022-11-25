@@ -5,7 +5,11 @@ import image1 from '../images/appvg.png';
 import image2 from '../images/apptech.png';
 
 const ProyectsContainer = styled.div`
-    /* background-color: ${props => localStorage.theme !== 'primary' ? props.theme.backgroundSecundary : props.theme.backgroundPrimary}; */
+    background-color: ${props => localStorage.theme !== 'primary' ? props.theme.proyectSecundary : props.theme.proyectPrimary};
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 `
 
 export const Proyects = () => {
@@ -25,6 +29,7 @@ export const Proyects = () => {
 
     return (
             <ProyectsContainer>
+                <h2>Proyectos</h2>
                 {
                     proyects && proyects.map(e => <CardProyects props={e} />)
                 }

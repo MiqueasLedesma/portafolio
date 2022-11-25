@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import css_logo from '../images/css-logo.svg';
 
 const imgStyle = {
     width: '100px',
@@ -33,7 +32,7 @@ const FlipCardContainer = styled.div`
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        background-color: #bbb;
+        background-color: ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary};
         color: black;
     }
     .flip-card-back{
@@ -42,7 +41,7 @@ const FlipCardContainer = styled.div`
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        background-color: dodgerblue;
+        background-color: ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary};;
         color: white;
         transform: rotateY(180deg);
     }
@@ -50,19 +49,20 @@ const FlipCardContainer = styled.div`
 `
 
 
-export const FlipCard = () => {
+export const FlipCard = ({img, text}) => {
     return (
         <FlipCardContainer>
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
-                        <img src={css_logo} alt="Avatar" style={imgStyle} />
+                        <img src={img} alt="Avatar" style={imgStyle} />
                     </div>
                     <div className="flip-card-back">
-                        
+                    <img src={img} alt="Avatar" style={imgStyle} />
                     </div>
                 </div>
             </div>
+            {text}
         </FlipCardContainer>
     )
 }

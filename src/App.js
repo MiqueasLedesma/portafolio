@@ -13,7 +13,9 @@ export const myTheme = {
   textPrimary: '#e2e2e2',
   textSecundary: '#120907',
   backgroundPrimary: '#0e1b36',
-  backgroundSecundary: '#beceff'
+  backgroundSecundary: '#beceff',
+  proyectPrimary: '#124860',
+  proyectSecundary: '#f3eae8',
 };
 
 const AppContainer = styled.div`
