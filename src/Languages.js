@@ -11,7 +11,9 @@ export const language = {
         },
         nav_text: {
             skills: 'Habilidades',
-            about: 'Sobre mi'
+            about: 'Sobre mi',
+            proyects: 'Proyectos',
+            contact: 'Contacto'
         }
 
     },
@@ -27,7 +29,9 @@ export const language = {
         },
         nav_text: {
             skills: 'Skills',
-            about: 'About me'
+            about: 'About me',
+            proyects: 'Proyects',
+            contact: 'Contact'
         }
     }
 }

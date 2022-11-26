@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import footer_logo from '../images/footer-logo.png';
 import linkedin_logo from '../images/linkedin-logo.svg';
 import github_logo from '../images/github-logo.png';
-import react_logo from '../images/react-logo.svg';
-import html_logo from '../images/html-logo.svg';
-import css_logo from '../images/css-logo.svg';
-import styled_logo from '../images/styled-logo.svg';
+import whatsap_logo from '../images/whatsap-logo.png';
+import gmail_logo from '../images/gmail-logo.png';
 import { selectLanguage } from '../Languages';
 
 
@@ -34,7 +32,7 @@ const FooterContainer = styled.div`
         grid-gap: 50px;
         padding: 45px 0px;
         @media screen and (max-width:768px) {
-            width: 50%;
+            width: 65%;
             display: grid;
             grid-template-columns: repeat(1 , 1fr);
             grid-gap: 30px;
@@ -85,8 +83,8 @@ const FooterContainer = styled.div`
 `
 
 export const Footer = ({ language }) => {
-
     const { footer_text } = selectLanguage(language);
+
     return (
         <FooterContainer>
             <footer>
@@ -99,10 +97,10 @@ export const Footer = ({ language }) => {
                     <Box className="box">
                         <h2>{footer_text.contact}:</h2>
                         <p>
-                            <img src={react_logo} alt="" />
-                            <img src={html_logo} alt="" />
-                            <img src={css_logo} alt="" />
-                            <img src={styled_logo} alt="" />
+                            <img src={whatsap_logo} alt="" /> +543704716194
+                        </p>
+                        <p style={{ width: 'fitContent' }}>
+                            <img src={gmail_logo} alt="" /> miqueasledesmadev@gmail.com
                         </p>
                     </Box>
                     <Box className="box">
@@ -113,7 +111,7 @@ export const Footer = ({ language }) => {
                     </Box>
                 </Group1>
                 <Group2 className="group-2">
-                    <small style={{color: 'white'}}>
+                    <small style={{ color: 'white' }}>
                         copyright© 2022: <b>Miqueas Ledesma</b> - {footer_text.rights}
                     </small>
                 </Group2>

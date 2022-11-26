@@ -34,14 +34,10 @@ const NavContainer = styled.div`
     .links {
         display: flex;
         user-select: none;
-        width: 40%;
-        justify-content: space-between;
+        gap: 3rem;
         transition: 1s;
         &:hover {
             cursor: pointer;
-        }
-        .active {
-            color: #0057c0;
         }
         h4 {
             &:hover {
@@ -62,7 +58,7 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const handleScroll = e => {
         if (state[e.target.id]) return setState({});
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 2210);
         setState({ [e.target.id]: true })
     }
 
@@ -74,21 +70,30 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const handleScroll3 = e => {
         if (state[e.target.id]) return setState({});
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 300);
+        setState({ [e.target.id]: true })
+    }
+
+    const handleScroll4 = e => {
+        if (state[e.target.id]) return setState({});
+        window.scrollTo(0, 1070);
         setState({ [e.target.id]: true })
     }
 
     return (
         <NavContainer>
             <div className='links'>
-                <h4 id='title' onClick={handleScroll} className={state.title && 'active'}>
-                    Miqueas Ledesma
-                </h4>
-                <h4 id='about' onClick={handleScroll2} className={state.about && 'active'} >
+                <h4 id='about' onClick={handleScroll2}>
                     {nav_text.about}
                 </h4>
-                <h4 id='skills' onClick={handleScroll3} className={state.skills && 'active'}>
+                <h4 id='skills' onClick={handleScroll3}>
                     {nav_text.skills}
+                </h4>
+                <h4 id='proyects' onClick={handleScroll4}>
+                    {nav_text.proyects}
+                </h4>
+                <h4 id='contact' onClick={handleScroll}>
+                    {nav_text.contact}
                 </h4>
             </div>
             <div className='box'>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { Presentation } from './components/Presentation';
@@ -42,6 +43,13 @@ function App() {
     setLanguage(e.target.value);
   }
 
+  function printMousePos(event) {
+    console.log("clientX: " + event.pageX +
+      " - clientY: " + event.pageY)
+  }
+
+  document.addEventListener("click", printMousePos);
+
   return (
     <ThemeProvider theme={myTheme}>
       <AppContainer>
@@ -49,6 +57,7 @@ function App() {
         <Presentation language={language} />
         <Skills language={language} />
         <Proyects language={language} />
+        <Contact language={language} />
         <Footer language={language} />
       </AppContainer>
     </ThemeProvider>
