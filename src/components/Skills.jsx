@@ -12,6 +12,9 @@ const SkillsContainer = styled.div`
     justify-content: center;
     align-items: center;
     color: ${props => localStorage.theme != 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
+    @media screen and (max-width:768px){
+      height: 60rem;
+    }
     .text {
       display: flex;
       flex-direction: column;
@@ -28,6 +31,9 @@ const SkillsContainer = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       gap: 3rem;
+      text-align: center;
+      justify-content: center;
+      width: 90%;
     }
     `
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import send_logo from '../images/send-logo.png';
 const ContactContainer = styled.div`
+    color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
     padding-bottom: 20px;
     height: fit-content;
     width: 100%;

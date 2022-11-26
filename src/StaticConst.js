@@ -4,9 +4,9 @@ import styled_logo from './images/styled-logo.svg';
 import react_logo from './images/react-logo.svg';
 import redux_logo from './images/redux-logo.svg';
 import node_logo from './images/nodejs-logo.svg';
-// import express_logo from './images/express-logo.svg';
 import postgres_logo from './images/postgresql-logo.svg';
-// import sequelize_logo from './images/sequelize-logo.svg';
+import sequelize_logo from './images/sequelize-logo.svg';
+import bootstrap_logo from './images/bootstrap-logo.svg';
 
 export const flipCardInfo = [
     {
@@ -30,12 +30,20 @@ export const flipCardInfo = [
         img: styled_logo
     },
     {
+        text: 'Bootstrap',
+        img: bootstrap_logo
+    },
+    {
         text: 'Postgres',
         img: postgres_logo
     },
     {
         text: 'Node.js',
         img: node_logo
+    },
+    {
+        text: 'Sequelize',
+        img: sequelize_logo
     },
 ];
 
@@ -48,4 +56,4 @@ export const myTheme = {
     backgroundSecundary: '#beceff',
     proyectPrimary: '#124860',
     proyectSecundary: '#f3eae8',
-  };
+};
