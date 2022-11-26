@@ -53,12 +53,14 @@ export const proyects = [
     {
         title: 'App-Videogames',
         image: image1,
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vel modi, rerum reiciendis sequi consectetur maiores iure facilis similique dicta explicabo molestiae aperiam dolores omnis neque illo id iusto tempore?'
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vel modi, rerum reiciendis sequi consectetur maiores iure facilis similique dicta explicabo molestiae aperiam dolores omnis neque illo id iusto tempore?',
+        url: 'https://videogamespi-miqueas.vercel.app/'
     },
     {
         title: 'TechStore',
         image: image2,
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam eligendi, blanditiis sed beatae aspernatur quae fugit quia nulla ipsa minima dolor! Hic debitis corrupti unde commodi vero ducimus natus!'
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam eligendi, blanditiis sed beatae aspernatur quae fugit quia nulla ipsa minima dolor! Hic debitis corrupti unde commodi vero ducimus natus!',
+        url: 'https://techstore-ruby.vercel.app/'
     }
 ];
 

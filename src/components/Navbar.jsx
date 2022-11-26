@@ -82,6 +82,8 @@ const NavContainer = styled.div`
         }
     }
     .menu {
+        padding-left: 15px;
+        padding-top: 10px;
         @media screen and (min-width:768px){
             display: none;
         }

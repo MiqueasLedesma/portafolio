@@ -23,11 +23,11 @@ const CardProyect = styled.div`
 `
 
 export const CardProyects = ({ props }) => {
-    const { image, description, title } = props;
+    const { image, description, title, url } = props;
     return (
         <CardProyect>
             <h2>{title}</h2>
-            <img src={image} alt="image" />
+            <a href={url} target="_blank" rel="noopener noreferrer"><img src={image} alt="image" /></a>
             <div className='text'>
                 <p>{description}</p>
             </div>
