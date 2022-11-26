@@ -7,6 +7,8 @@ import node_logo from './images/nodejs-logo.svg';
 import postgres_logo from './images/postgresql-logo.svg';
 import sequelize_logo from './images/sequelize-logo.svg';
 import bootstrap_logo from './images/bootstrap-logo.svg';
+import image1 from './images/appvg.png';
+import image2 from './images/apptech.png';
 
 export const flipCardInfo = [
     {
@@ -45,6 +47,19 @@ export const flipCardInfo = [
         text: 'Sequelize',
         img: sequelize_logo
     },
+];
+
+export const proyects = [
+    {
+        title: 'App-Videogames',
+        image: image1,
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vel modi, rerum reiciendis sequi consectetur maiores iure facilis similique dicta explicabo molestiae aperiam dolores omnis neque illo id iusto tempore?'
+    },
+    {
+        title: 'TechStore',
+        image: image2,
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam eligendi, blanditiis sed beatae aspernatur quae fugit quia nulla ipsa minima dolor! Hic debitis corrupti unde commodi vero ducimus natus!'
+    }
 ];
 
 export const myTheme = {

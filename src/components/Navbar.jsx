@@ -75,25 +75,21 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
     const [open, setOpen] = useState(false);
 
     const handleScroll = e => {
-        if (state[e.target.id]) return setState({});
         window.scrollTo(0, 2200);
         setState({ [e.target.id]: true })
     }
 
     const handleScroll2 = e => {
-        if (state[e.target.id]) return setState({});
         window.scrollTo(0, 0);
         setState({ [e.target.id]: true })
     }
 
     const handleScroll3 = e => {
-        if (state[e.target.id]) return setState({});
         window.scrollTo(0, 400);
         setState({ [e.target.id]: true })
     }
 
     const handleScroll4 = e => {
-        if (state[e.target.id]) return setState({});
         window.scrollTo(0, 1055);
         setState({ [e.target.id]: true })
     }
