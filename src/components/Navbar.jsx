@@ -100,18 +100,23 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const handleScroll = e => {
         window.scrollTo(0, 2200);
+        if (window.innerWidth <= 768) setOpen(!open)
+
     }
 
     const handleScroll2 = e => {
         window.scrollTo(0, 0);
+        if (window.innerWidth <= 768) setOpen(!open)
     }
 
     const handleScroll3 = e => {
         window.scrollTo(0, 400);
+        if (window.innerWidth <= 768) setOpen(!open)
     }
 
     const handleScroll4 = e => {
         window.scrollTo(0, 1055);
+        if (window.innerWidth <= 768) setOpen(!open)
     }
 
 
@@ -119,7 +124,7 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
         <NavContainer>
             <div className={`bigBox ${open && 'active'}`}>
                 <div className={`menu ${open && 'active'}`}>
-                    <MenuIcon setState={setOpen} state={open}/>
+                    <MenuIcon setState={setOpen} state={open} />
                 </div>
 
                 <div className={`links ${open && 'active'}`}>

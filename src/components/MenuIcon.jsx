@@ -8,14 +8,14 @@ const MyContainer = styled.div`
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
+  color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
   text-align: center;
 }
 .hamburger .line{
   width: 50px;
   height: 5px;
-  background-color: #ecf0f1;
+  background-color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
