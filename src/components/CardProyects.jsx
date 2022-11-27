@@ -7,8 +7,15 @@ const CardProyect = styled.div`
         color: ${props => localStorage.theme !== 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
     }
     img {
-        width: 60%;
-        height: 80%;
+        width: 70%;
+        border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
+        transition: 500ms;
+        &:hover {
+            width: 75%;
+        }
+        @media screen and (max-width:768px) {
+            width: 100vw;
+        }
     }
     p {
         color: ${props => localStorage.theme !== 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
@@ -25,12 +32,12 @@ const CardProyect = styled.div`
 export const CardProyects = ({ props }) => {
     const { image, description, title, url } = props;
     return (
-        <CardProyect>
+        <CardProyect >
             <h2>{title}</h2>
             <a href={url} target="_blank" rel="noopener noreferrer"><img src={image} alt="image" /></a>
             <div className='text'>
                 <p>{description}</p>
             </div>
-        </CardProyect>
+        </CardProyect >
     )
 }

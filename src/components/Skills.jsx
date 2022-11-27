@@ -17,7 +17,7 @@ const SkillsContainer = styled.div`
     }
     .text {
       display: flex;
-      flex-direction: column;
+      flex-direction: column; 
       .box {
         display: flex;
         gap: 5rem;

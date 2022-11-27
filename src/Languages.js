@@ -6,15 +6,16 @@ export const language = {
             social: 'Mis redes sociales'
         },
         body_text: {
-            title: 'Sobre mi',
-            text: 'Aca en teoria tengo que poner algo que todavia no se'
+            title: `Hola, soy Miqueas Ledesma`,
+            text: 'Un desarrollador fullstack en constante formación, recientemente finalice el bootcamp soy Henry donde realice proyectos tanto grupales como individuales.'
         },
         nav_text: {
             skills: 'Habilidades',
             about: 'Sobre mi',
             proyects: 'Proyectos',
             contact: 'Contacto'
-        }
+        },
+        proyects_title: 'Proyectos',
 
     },
     en: {
@@ -24,15 +25,16 @@ export const language = {
             social: 'My Social Networks'
         },
         body_text: {
-            title: 'About me',
-            text: `Here in theory I have to put something that I still don't know`
+            title: `Hi, I'm Miqueas Ledesma`,
+            text: `A fullstack developer in constant training, he recently finished the I'm Henry bootcamp where he carried out both group and individual projects.`
         },
         nav_text: {
             skills: 'Skills',
             about: 'About me',
             proyects: 'Proyects',
             contact: 'Contact'
-        }
+        },
+        proyects_text: 'Proyects',
     }
 }
 

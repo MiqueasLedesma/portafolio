@@ -7,8 +7,10 @@ import node_logo from './images/nodejs-logo.svg';
 import postgres_logo from './images/postgresql-logo.svg';
 import sequelize_logo from './images/sequelize-logo.svg';
 import bootstrap_logo from './images/bootstrap-logo.svg';
+import js_logo from './images/js-logo.svg';
 import image1 from './images/appvg.png';
 import image2 from './images/apptech.png';
+
 
 export const flipCardInfo = [
     {
@@ -18,6 +20,14 @@ export const flipCardInfo = [
     {
         text: 'CSS',
         img: css_logo
+    },
+    {
+        text: 'JavaScript',
+        img: js_logo
+    },
+    {
+        text: 'Bootstrap',
+        img: bootstrap_logo
     },
     {
         text: 'React',
@@ -30,10 +40,6 @@ export const flipCardInfo = [
     {
         text: 'Styled-Comp',
         img: styled_logo
-    },
-    {
-        text: 'Bootstrap',
-        img: bootstrap_logo
     },
     {
         text: 'Postgres',
@@ -49,20 +55,76 @@ export const flipCardInfo = [
     },
 ];
 
-export const proyects = [
-    {
-        title: 'App-Videogames',
-        image: image1,
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vel modi, rerum reiciendis sequi consectetur maiores iure facilis similique dicta explicabo molestiae aperiam dolores omnis neque illo id iusto tempore?',
-        url: 'https://videogamespi-miqueas.vercel.app/'
-    },
-    {
-        title: 'TechStore',
-        image: image2,
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam eligendi, blanditiis sed beatae aspernatur quae fugit quia nulla ipsa minima dolor! Hic debitis corrupti unde commodi vero ducimus natus!',
-        url: 'https://techstore-ruby.vercel.app/'
-    }
-];
+export const proyects = {
+    esp: [
+        {
+            title: 'TechStore',
+            image: image2,
+            description: 'Proyecto final realizado en equipo durante el bootcamp de soy Henry, es un E-commerce de hardware para computadoras',
+            list: [
+                'Filtrar los productos por categorías y marcas de forma combinada así como también elegir como ordenar los productos',
+                'Sección de comentarios',
+                'Geo-localización',
+                'Autenticación por Google',
+                'Panel de usuario y de administrador',
+                'Sección de favoritos(wishlist)',
+                'Carrito de compras con persistencia de datos',
+                'Pasarela de pagos(MercadoPago)',
+                'Envió de emails de confirmacion'
+            ],
+            subtitle: 'Tecnologias Utilizadas:',
+            tecnologys: 'PostgreSQL | Sequelize | Express | Node.js | React | Redux | Material-UI | Bootstrap',
+            url: 'https://videogamespi-miqueas.vercel.app/'
+        },
+        {
+            title: 'App-Videogames',
+            image: image1,
+            description: 'Es mi proyecto individual realizado en solitario durante el bootcamp de soy Henry con temática de videojuegos.',
+            list: [
+                'Filtrado por rating, genero e incluso elegir el modo en que se ordenan al renderizarse en pantalla',
+                'Posibilidad de buscar usando un search-bar',
+                'Formulario(controlado) para agregar videojuegos directamente a la base de datos'
+            ],
+            subtitle: 'Tecnologías utilizadas:',
+            tecnologys: 'React | Redux | Styled-component |Nodejs | Express | Sequelize | PostgreSQL',
+            url: 'https://techstore-ruby.vercel.app/'
+        }
+    ],
+    en: [
+        {
+            title: 'TechStore',
+            image: image2,
+            description: 'Final project carried out as a team during "Soy Henry" bootcamp, it is an E-commerce of computer hardware.',
+            list: [
+                'Filter the products by categories and brands in a combined way as well as choose how to order the products',
+                'Comments section',
+                'Geo-location',
+                'Authentication by Google',
+                'User and administrator panel',
+                'Favorites section (wishlist)',
+                'Shopping cart with data persistence',
+                'Payment gateway (MercadoPago)',
+                'Sending confirmation emails'
+            ],
+            subtitle: 'Used technology:',
+            tecnologys: 'PostgreSQL | Sequelize | Express | Node.js | React | Redux | Material-UI | Bootstrap',
+            url: 'https://videogamespi-miqueas.vercel.app/'
+        },
+        {
+            title: 'App-Videogames',
+            image: image1,
+            description: `It's my individual project done alone during "Soy Henry" bootcamp videogame-themed bootcamp.`,
+            list: [
+                'Filtered by rating, gender and even choose the way they are ordered when rendered on the screen',
+                'Ability to search using a search-bar',
+                'Form (controlled) to add video games directly to the database'
+            ],
+            subtitle: 'Used technology:',
+            tecnologys: 'React | Redux | Styled-component |Nodejs | Express | Sequelize | PostgreSQL',
+            url: 'https://techstore-ruby.vercel.app/'
+        }
+    ]
+}
 
 export const myTheme = {
     primary: '#213f6d',

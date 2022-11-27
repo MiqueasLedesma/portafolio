@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { selectLanguage } from '../Languages';
 import { proyects } from '../StaticConst';
 import { CardProyects } from './CardProyects';
 
@@ -13,14 +14,15 @@ const ProyectsContainer = styled.div`
     gap: 5rem;
 `
 
-export const Proyects = () => {
-
+export const Proyects = ({ language }) => {
+    const toRender = selectLanguage(proyects);
+    const { proyects_title } = selectLanguage(language);
     return (
-            <ProyectsContainer>
-                <h2>Proyectos</h2>
-                {
-                    proyects && proyects.map(e => <CardProyects props={e} />)
-                }
-            </ProyectsContainer>
+        <ProyectsContainer>
+            <h2>{proyects_title}</h2>
+            {
+                toRender && toRender.map(e => <CardProyects props={e} />)
+            }
+        </ProyectsContainer>
     )
 }

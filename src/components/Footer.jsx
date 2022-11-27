@@ -106,7 +106,7 @@ export const Footer = ({ language }) => {
                     <Box className="box">
                         <h2>{footer_text.social}:</h2>
                         <a href='https://www.linkedin.com/in/miqueas-ledesma-08a106246/' target='_blank'><img src={linkedin_logo} alt="img" /></a>
-                        <a href='https://github.com/MiqueasLedesma' target='_bla'><img src={github_logo} alt="img" /></a>
+                        <a href='https://github.com/MiqueasLedesma' target='_blank'><img src={github_logo} alt="img" /></a>
 
                     </Box>
                 </Group1>

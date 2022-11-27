@@ -13,6 +13,12 @@ const ContactContainer = styled.div`
     form {
         display: flex;
         flex-direction: column;
+        input {
+            border-radius: 5px;
+        }
+        textarea {
+            border: 5px;
+        }
     }
     .box {
         margin-top: 10px;
@@ -35,9 +41,14 @@ const ContactContainer = styled.div`
 
 export const Contact = () => {
 
-    const [message, setMessage] = useState("");
-    const [email, setEmail] = useState("");
-    const [name, setName] = useState("");
+    const [state, setState] = useState({});
+
+    const handleChange = e => {
+        setState({
+            ...state,
+            [e.target.name]: e.target.value
+        })
+    }
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -48,14 +59,16 @@ export const Contact = () => {
                 Accept: "application/json",
             },
             body: JSON.stringify({
-                name,
-                email,
-                message,
+                name: state.name,
+                email: state.email,
+                message: state.message,
             }),
         });
-        setMessage("")
-        setEmail("")
-        setName("")
+        setState({
+            name: '',
+            email: '',
+            message: ''
+        });
         alert("Form submitted");
     };
 
@@ -64,13 +77,13 @@ export const Contact = () => {
             <h2>Contact:</h2>
             <form action="https://submit-form.com/fSutHLJe" onSubmit={handleSubmit}>
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" required="" value={name} onChange={e => setName(e.target.value)} />
+                <input type="text" id="name" name="name" placeholder="Name" required="" value={state.name} onChange={handleChange} />
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required="" value={email} onChange={e => setEmail(e.target.value)} />
+                <input type="email" id="email" name="email" placeholder="Email" required="" value={state.email} onChange={handleChange} />
                 <label for="message">Message</label>
                 <textarea
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
+                    value={state.message}
+                    onChange={handleChange}
                     cols="30"
                     rows="10"
                     id="message"
