@@ -15,6 +15,9 @@ const CardProyect = styled.div`
         }
         @media screen and (max-width:768px) {
             width: 100vw;
+            &:hover {
+                width: 100vw;
+            }
         }
     }
     p {
