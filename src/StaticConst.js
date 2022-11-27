@@ -74,7 +74,7 @@ export const proyects = {
             ],
             subtitle: 'Tecnologias Utilizadas:',
             tecnologys: 'PostgreSQL | Sequelize | Express | Node.js | React | Redux | Material-UI | Bootstrap',
-            url: 'https://videogamespi-miqueas.vercel.app/'
+            url: 'https://techstore-ruby.vercel.app/'
         },
         {
             title: 'App-Videogames',
@@ -87,7 +87,7 @@ export const proyects = {
             ],
             subtitle: 'Tecnologías utilizadas:',
             tecnologys: 'React | Redux | Styled-component |Nodejs | Express | Sequelize | PostgreSQL',
-            url: 'https://techstore-ruby.vercel.app/'
+            url: 'https://videogamespi-miqueas.vercel.app/'
         }
     ],
     en: [
@@ -108,7 +108,7 @@ export const proyects = {
             ],
             subtitle: 'Used technology:',
             tecnologys: 'PostgreSQL | Sequelize | Express | Node.js | React | Redux | Material-UI | Bootstrap',
-            url: 'https://videogamespi-miqueas.vercel.app/'
+            url: 'https://techstore-ruby.vercel.app/'
         },
         {
             title: 'App-Videogames',
@@ -121,7 +121,7 @@ export const proyects = {
             ],
             subtitle: 'Used technology:',
             tecnologys: 'React | Redux | Styled-component |Nodejs | Express | Sequelize | PostgreSQL',
-            url: 'https://techstore-ruby.vercel.app/'
+            url: 'https://videogamespi-miqueas.vercel.app/'
         }
     ]
 }
