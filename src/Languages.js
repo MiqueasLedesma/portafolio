@@ -15,7 +15,7 @@ export const language = {
             proyects: 'Proyectos',
             contact: 'Contacto'
         },
-        proyects_title: 'Proyectos',
+        proyects_text: 'Proyectos',
 
     },
     en: {

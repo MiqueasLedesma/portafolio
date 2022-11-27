@@ -74,7 +74,7 @@ export const Contact = () => {
 
     return (
         <ContactContainer>
-            <h2>Contact:</h2>
+            <h2><strong>Contact:</strong></h2>
             <form action="https://submit-form.com/fSutHLJe" onSubmit={handleSubmit}>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required="" value={state.name} onChange={handleChange} />

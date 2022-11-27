@@ -77,6 +77,7 @@ const NavContainer = styled.div`
         flex-direction: column;
         align-items: center;
         grid-area: 2 / 3 / 6 / 4;
+        padding-bottom: 20px;
         @media screen and (min-width:768px){
             display: none;
         }
@@ -100,25 +101,37 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const [open, setOpen] = useState(false);
 
-    const handleScroll = e => {
-        window.scrollTo(0, 2200);
-        if (window.innerWidth <= 768) setOpen(!open)
-
+    const scrollAboutMe = e => {
+        if (window.innerWidth > 768) return window.scrollTo(0, 0);
+        if (window.innerWidth <= 768) {
+            setOpen(!open);
+            window.scrollTo(0,0)
+        }
     }
 
-    const handleScroll2 = e => {
-        window.scrollTo(0, 0);
-        if (window.innerWidth <= 768) setOpen(!open)
+    const scrollSkills = e => {
+        if (window.innerWidth > 768) return window.scrollTo(0, 500);
+        if (window.innerWidth <= 768) {
+            setOpen(!open);
+            window.scrollTo(0,680)
+        }
     }
 
-    const handleScroll3 = e => {
-        window.scrollTo(0, 400);
-        if (window.innerWidth <= 768) setOpen(!open)
+    const scrollProyects = e => {
+        if (window.innerWidth > 768) return window.scrollTo(0, 1150);
+        if (window.innerWidth <= 768) {
+            setOpen(!open);
+            window.scrollTo(0,1620)
+        }
     }
 
-    const handleScroll4 = e => {
-        window.scrollTo(0, 1055);
-        if (window.innerWidth <= 768) setOpen(!open)
+    const scrollContact = e => {
+        if (window.innerWidth > 768) return window.scrollTo(0, 2200);
+        if (window.innerWidth <= 768) {
+            setOpen(!open);
+            window.scrollTo(0,2515)
+        }
+
     }
 
 
@@ -130,16 +143,16 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
                 </div>
 
                 <div className={`links ${open && 'active'}`}>
-                    <h4 id='about' onClick={handleScroll2}>
+                    <h4 id='about' onClick={scrollAboutMe}>
                         {nav_text.about}
                     </h4>
-                    <h4 id='skills' onClick={handleScroll3}>
+                    <h4 id='skills' onClick={scrollSkills}>
                         {nav_text.skills}
                     </h4>
-                    <h4 id='proyects' onClick={handleScroll4}>
+                    <h4 id='proyects' onClick={scrollProyects}>
                         {nav_text.proyects}
                     </h4>
-                    <h4 id='contact' onClick={handleScroll}>
+                    <h4 id='contact' onClick={scrollContact}>
                         {nav_text.contact}
                     </h4>
                 </div>

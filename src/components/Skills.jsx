@@ -41,7 +41,7 @@ export const Skills = () => {
   return (
     <SkillsContainer>
       <div className='text'>
-        <div><h2>Skills</h2></div>
+        <div><h2><strong>Skills:</strong></h2></div>
       </div>
       <div className='skills'>
         {

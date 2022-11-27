@@ -43,12 +43,12 @@ function App() {
     setLanguage(e.target.value);
   }
 
-  // function printMousePos(event) {
-  //   console.log("clientX: " + event.pageX +
-  //     " - clientY: " + event.pageY)
-  // }
+  function printMousePos(event) {
+    console.log("clientX: " + event.pageX +
+      " - clientY: " + event.pageY)
+  }
 
-  // document.addEventListener("click", printMousePos);
+  document.addEventListener("click", printMousePos);
 
   return (
     <ThemeProvider theme={myTheme}>
