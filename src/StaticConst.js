@@ -135,4 +135,6 @@ export const myTheme = {
     backgroundSecundary: '#beceff',
     proyectPrimary: '#124860',
     proyectSecundary: '#f3eae8',
+    mixPrimary: '#0e455f',
+    mixSecundary: '#81b1e5'
 };

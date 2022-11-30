@@ -16,6 +16,7 @@ export const language = {
             contact: 'Contacto'
         },
         proyects_text: 'Proyectos',
+        skills_text: 'Habilidades'
 
     },
     en: {
@@ -35,6 +36,7 @@ export const language = {
             contact: 'Contact'
         },
         proyects_text: 'Proyects',
+        skills_text: 'Skills'
     }
 }
 

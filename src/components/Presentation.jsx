@@ -14,7 +14,7 @@ const BodyContainer = styled.div`
     align-items: center;
     height: fit-content;
     color: ${props => localStorage.theme != 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
-    background-color: ${props => localStorage.theme !== 'primary' ? props.theme.secundary : props.theme.primary};
+    background-color: ${props => localStorage.theme !== 'primary' ? '#d6e6f7' : props.theme.primary};
     .box {
         display: flex;
         flex-direction: row;
@@ -40,9 +40,9 @@ const BodyContainer = styled.div`
                 color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
             }
             p{
-                width: 500px;
+                width: 25rem;
                 @media screen and (max-width:768px){
-                    width: 300px;
+                    width: 90%;
                 }
             }
             img {
@@ -52,6 +52,10 @@ const BodyContainer = styled.div`
                     user-select: none;
                     cursor: pointer;
                 }
+            }
+            @media screen and (max-width:768px) {
+                display: flex;
+                align-items: center;
             }
         }
     }

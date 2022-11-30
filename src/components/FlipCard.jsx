@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 const imgStyle = {
     width: '100px',
-    heigth: '100px'
+    heigth: '100px',
 }
 
 const FlipCardContainer = styled.div`
+    background-color: transparent;
     .flip-card {
-        background-color: transparent;
         width: 100px;
         height: 100px;
         perspective: 1000px;
@@ -32,8 +32,6 @@ const FlipCardContainer = styled.div`
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        background-color: ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary};
-        color: black;
     }
     .flip-card-back{
         position: absolute;
@@ -41,8 +39,6 @@ const FlipCardContainer = styled.div`
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        background-color: ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary};;
-        color: white;
         transform: rotateY(180deg);
     }
 

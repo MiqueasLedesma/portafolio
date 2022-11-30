@@ -2,17 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CardProyect = styled.div`
-    background-color: ${props => localStorage.theme !== 'primary' ? props.theme.proyectSecundary : props.theme.proyectPrimary};
     h2 {
         color: ${props => localStorage.theme !== 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
     }
     img {
         width: 70%;
         border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
-        transition: 500ms;
-        &:hover {
-            width: 75%;
-        }
         @media screen and (max-width:768px) {
             width: 100vw;
             &:hover {

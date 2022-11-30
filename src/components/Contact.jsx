@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Swal from 'sweetalert2';
 import send_logo from '../images/send-logo.png';
 const ContactContainer = styled.div`
+        background: linear-gradient(
+        35.3deg,
+        ${props => localStorage.theme == 'primary' ? props.theme.mixPrimary : props.theme.mixSecundary} 0%,
+        ${props => localStorage.theme == 'primary' ? props.theme.mixPrimary : props.theme.mixSecundary} 50%,
+        ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary} 0%,
+        ${props => localStorage.theme == 'primary' ? props.theme.backgroundPrimary : props.theme.backgroundSecundary} 50%
+    );
     color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -69,7 +78,7 @@ export const Contact = () => {
             email: '',
             message: ''
         });
-        alert("Form submitted");
+        Swal.fire('Succes!')
     };
 
     return (

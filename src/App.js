@@ -11,7 +11,18 @@ import { myTheme } from './StaticConst';
 
 
 const AppContainer = styled.div`
+  font-family: Monospace;
   background-color: ${props => localStorage.theme !== 'primary' ? props.theme.backgroundSecundary : props.theme.backgroundPrimary};
+  strong {
+       font-family: cursive;
+       font-weight: 400;
+       font-size: 3.5rem;
+       text-decoration: underline;
+       transition: 1s;
+       &:hover {
+        font-size: 3.8rem;
+       }
+    }
 `
 
 function App() {

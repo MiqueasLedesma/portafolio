@@ -110,26 +110,26 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
     }
 
     const scrollSkills = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 500);
+        if (window.innerWidth > 768) return window.scrollTo(0, 400);
         if (window.innerWidth <= 768) {
             setOpen(!open);
-            window.scrollTo(0,680)
+            window.scrollTo(0,655)
         }
     }
 
     const scrollProyects = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 1150);
+        if (window.innerWidth > 768) return window.scrollTo(0, 980);
         if (window.innerWidth <= 768) {
             setOpen(!open);
-            window.scrollTo(0,1620)
+            window.scrollTo(0,1650)
         }
     }
 
     const scrollContact = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 2200);
+        if (window.innerWidth > 768) return window.scrollTo(0, 2150);
         if (window.innerWidth <= 768) {
             setOpen(!open);
-            window.scrollTo(0,2515)
+            window.scrollTo(0,2650)
         }
 
     }

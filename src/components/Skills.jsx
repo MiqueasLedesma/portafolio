@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlipCard } from './FlipCard';
 import { flipCardInfo } from '../StaticConst';
+import { selectLanguage } from '../Languages';
 
 const SkillsContainer = styled.div`
-    height: 50rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: fit-content;
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -30,22 +33,26 @@ const SkillsContainer = styled.div`
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 3rem;
+      gap: 8rem;
       text-align: center;
       justify-content: center;
       width: 90%;
+      @media screen and (max-width:768px){
+        gap: 3rem;
+      }
     }
     `
 
-export const Skills = () => {
+export const Skills = ({ language }) => {
+  const { skills_text } = selectLanguage(language);
   return (
     <SkillsContainer>
       <div className='text'>
-        <div><h2><strong>Skills:</strong></h2></div>
+        <div><h2><strong>{skills_text}:</strong></h2></div>
       </div>
       <div className='skills'>
         {
-          flipCardInfo.map(e => <FlipCard img={e.img} text={e.text} />)
+          flipCardInfo.map((e, index) => <FlipCard key={index} img={e.img} text={e.text} />)
         }
       </div>
     </SkillsContainer>

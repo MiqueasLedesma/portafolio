@@ -32,7 +32,7 @@ const FooterContainer = styled.div`
         grid-gap: 50px;
         padding: 45px 0px;
         @media screen and (max-width:768px) {
-            width: 65%;
+            width: 70%;
             display: grid;
             grid-template-columns: repeat(1 , 1fr);
             grid-gap: 30px;
@@ -99,7 +99,7 @@ export const Footer = ({ language }) => {
                         <p>
                             <img src={whatsap_logo} alt="" /> +543704716194
                         </p>
-                        <p style={{ width: 'fitContent' }}>
+                        <p style={{ fontSize: '15px' }}>
                             <img src={gmail_logo} alt="" /> miqueasledesmadev@gmail.com
                         </p>
                     </Box>
