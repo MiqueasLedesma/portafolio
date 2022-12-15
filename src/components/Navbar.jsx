@@ -65,6 +65,7 @@ const NavContainer = styled.div`
         grid-area: 1 / 5 / 2 / 6;
     }
     .links {
+        padding-left: 1rem;
         display: flex;
         user-select: none;
         gap: 3rem;

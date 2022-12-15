@@ -14,7 +14,7 @@ const BodyContainer = styled.div`
     align-items: center;
     height: fit-content;
     color: ${props => localStorage.theme != 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
-    background-color: ${props => localStorage.theme !== 'primary' ? '#d6e6f7' : props.theme.primary};
+    background-color: ${props => localStorage.theme !== 'primary' ? props.theme.secundary : props.theme.primary};
     .box {
         display: flex;
         flex-direction: row;
