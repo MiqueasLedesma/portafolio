@@ -22,6 +22,7 @@ const BodyContainer = styled.div`
         width: fit-content;
         height: fit-content;
         img {
+            box-shadow: 0 0 2px 2px black;
             width: 200px;
             border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
             border-radius: 10px;
@@ -34,8 +35,14 @@ const BodyContainer = styled.div`
         .text {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             gap: 2rem;
             a{  
+                width: 200px;
+                height: 50px;
+                border-radius: 15px;
+                border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -62,6 +69,9 @@ const BodyContainer = styled.div`
                 display: flex;
                 align-items: center;
             }
+            img {
+                box-shadow: none;
+            }
         }
     }
 `
@@ -71,7 +81,7 @@ export const Presentation = ({ language }) => {
     return (
         <BodyContainer id='about'>
             <div className='box'>
-                <div>
+                <div className='portrait'>
                     <img src={photo} alt="error" />
                 </div>
 
