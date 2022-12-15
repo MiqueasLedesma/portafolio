@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Swal from 'sweetalert2';
 import send_logo from '../images/send-logo.png';
+import { selectLanguage } from '../Languages';
 const ContactContainer = styled.div`
         background: linear-gradient(
         35.3deg,
@@ -51,7 +52,9 @@ const ContactContainer = styled.div`
     }
 `
 
-export const Contact = () => {
+export const Contact = ({ language }) => {
+
+    const { contact_text } = selectLanguage(language);
 
     const [state, setState] = useState({});
 
@@ -86,13 +89,13 @@ export const Contact = () => {
 
     return (
         <ContactContainer>
-            <h2 id='contact'><strong>Contact:</strong></h2>
+            <h2 id='contact'><strong>{contact_text.title}:</strong></h2>
             <form action="https://submit-form.com/fSutHLJe" onSubmit={handleSubmit}>
-                <label for="name">Name</label>
+                <label for="name">{contact_text.name}</label>
                 <input type="text" id="name" name="name" placeholder="Name" required="" value={state.name} onChange={handleChange} />
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email" required="" value={state.email} onChange={handleChange} />
-                <label for="message">Message</label>
+                <label for="message">{contact_text.message}</label>
                 <textarea
                     value={state.message}
                     onChange={handleChange}
@@ -100,7 +103,7 @@ export const Contact = () => {
                     rows="10"
                     id="message"
                     name="message"
-                    placeholder="Message"
+                    placeholder={contact_text.message}
                     required=""
                 ></textarea>
                 <div className='box'>

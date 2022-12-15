@@ -35,7 +35,12 @@ const BodyContainer = styled.div`
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            a{
+            a{  
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
                 text-decoration: none;
                 color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
             }

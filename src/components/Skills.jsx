@@ -55,7 +55,7 @@ export const Skills = ({ language }) => {
       </div>
       <div className='skills'>
         {
-          flipCardInfo.map((e, index) => <FlipCard key={index} img={e.img} text={e.text} />)
+          flipCardInfo.map((e, index) => <FlipCard key={index} {...e} />)
         }
       </div>
     </SkillsContainer>

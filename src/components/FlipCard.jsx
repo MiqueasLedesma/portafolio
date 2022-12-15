@@ -28,8 +28,8 @@ const FrontCardContainer = styled.div`
         width: 100px;
         height: 100px;
         &:hover {
-            width: 115px;
-            height: 115px;
+            width: 110px;
+            height: 110px;
         }
     }
 `

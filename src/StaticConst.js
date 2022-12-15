@@ -58,6 +58,8 @@ export const flipCardInfo = [
 export const proyects = {
     esp: [
         {
+            left: true,
+            github: 'https://github.com/ricardoyegros/PF-Frontend',
             title: 'TechStore',
             image: image2,
             description: 'Proyecto final realizado en equipo durante el bootcamp de soy Henry, es un E-commerce de hardware para computadoras',
@@ -77,6 +79,8 @@ export const proyects = {
             url: 'https://techstore-ruby.vercel.app/'
         },
         {
+            github: 'https://github.com/MiqueasLedesma/Front-PI',
+            left: false,
             title: 'App-Videogames',
             image: image1,
             description: 'Es mi proyecto individual realizado en solitario durante el bootcamp de soy Henry con temática de videojuegos.',
@@ -92,6 +96,8 @@ export const proyects = {
     ],
     en: [
         {
+            left: true,
+            github: 'https://github.com/ricardoyegros/PF-Frontend',
             title: 'TechStore',
             image: image2,
             description: 'Final project carried out as a team during "Soy Henry" bootcamp, it is an E-commerce of computer hardware.',
@@ -111,6 +117,8 @@ export const proyects = {
             url: 'https://techstore-ruby.vercel.app/'
         },
         {
+            left: false,
+            github: 'https://github.com/MiqueasLedesma/Front-PI',
             title: 'App-Videogames',
             image: image1,
             description: `It's my individual project done alone during "Soy Henry" bootcamp videogame-themed bootcamp.`,

@@ -16,7 +16,12 @@ export const language = {
             contact: 'Contacto'
         },
         proyects_text: 'Proyectos',
-        skills_text: 'Habilidades'
+        skills_text: 'Habilidades',
+        contact_text: {
+            title:'Contacto',
+            name: 'Nombre',
+            message: 'Mensaje'
+        }
 
     },
     en: {
@@ -36,7 +41,12 @@ export const language = {
             contact: 'Contact'
         },
         proyects_text: 'Proyects',
-        skills_text: 'Skills'
+        skills_text: 'Skills',
+        contact_text: {
+            title:'Contact',
+            name: 'Name',
+            message: 'Message'
+        }
     }
 }
 
