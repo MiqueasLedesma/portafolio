@@ -8,6 +8,8 @@ import { Proyects } from './components/Proyects';
 import { Skills } from './components/Skills';
 import { language } from './Languages';
 import { myTheme } from './StaticConst';
+import * as bootstrap from 'bootstrap';
+window.bootstrap = bootstrap;
 
 
 const AppContainer = styled.div`
@@ -54,13 +56,9 @@ function App() {
     setLanguage(e.target.value);
   }
 
-  // function printMousePos(event) {
-  //   console.log("clientX: " + event.pageX +
-  //     " - clientY: " + event.pageY)
-  // }
-
-  // document.addEventListener("click", printMousePos);
-
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  
   return (
     <ThemeProvider theme={myTheme}>
       <AppContainer>

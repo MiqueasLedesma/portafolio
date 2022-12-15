@@ -64,7 +64,7 @@ const BodyContainer = styled.div`
 export const Presentation = ({ language }) => {
     const { body_text } = selectLanguage(language)
     return (
-        <BodyContainer>
+        <BodyContainer id='about'>
             <div className='box'>
                 <div>
                     <img src={photo} alt="error" />

@@ -1,64 +1,52 @@
 import React from 'react';
+import { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
 import styled from 'styled-components';
 
-const imgStyle = {
-    width: '100px',
-    heigth: '100px',
-}
 
-const FlipCardContainer = styled.div`
+const BackCardContainer = styled.div`
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
+    box-shadow: 0px 0px 2px 2px ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
+    border-radius: 15px;
+`
+const FrontCardContainer = styled.div`
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
     background-color: transparent;
-    .flip-card {
+    img {
+        transition: 500ms ease;
         width: 100px;
         height: 100px;
-        perspective: 1000px;
         &:hover {
-            transform: rotateY(180deg);
+            width: 115px;
+            height: 115px;
         }
     }
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-        &:hover {
-            transform: rotateY(180deg);
-        }
-    }
-    .flip-card-front {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-    .flip-card-back{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        transform: rotateY(180deg);
-    }
-
 `
 
+export const FlipCard = ({ img, text }) => {
 
-export const FlipCard = ({img, text}) => {
+    const [state, setState] = useState(false);
+
     return (
-        <FlipCardContainer>
-            <div className="flip-card">
-                <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                        <img src={img} alt="Avatar" style={imgStyle} />
-                    </div>
-                    <div className="flip-card-back">
-                    <img src={img} alt="Avatar" style={imgStyle} />
-                    </div>
-                </div>
-            </div>
-            {text}
-        </FlipCardContainer>
+        <ReactCardFlip isFlipped={state}>
+            <FrontCardContainer onClick={() => setState(!state)} >
+                <img src={img} alt="error" data-bs-toggle="tooltip" data-bs-placement="top" title={text} />
+            </FrontCardContainer>
+
+            <BackCardContainer onClick={() => setState(!state)}>
+                <p>{text}</p>
+            </BackCardContainer>
+        </ReactCardFlip>
     )
 }

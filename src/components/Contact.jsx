@@ -19,6 +19,9 @@ const ContactContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2 {
+        padding-top: 4rem;
+    }
     form {
         display: flex;
         flex-direction: column;
@@ -83,7 +86,7 @@ export const Contact = () => {
 
     return (
         <ContactContainer>
-            <h2><strong>Contact:</strong></h2>
+            <h2 id='contact'><strong>Contact:</strong></h2>
             <form action="https://submit-form.com/fSutHLJe" onSubmit={handleSubmit}>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required="" value={state.name} onChange={handleChange} />

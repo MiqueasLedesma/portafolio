@@ -6,6 +6,13 @@ import { selectLanguage } from '../Languages';
 import { MenuIcon } from './MenuIcon';
 
 const NavContainer = styled.div`
+    a {
+        text-decoration: none;
+        &:visited {
+            text-decoration: none;
+            color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
+        }
+    }
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -101,40 +108,6 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const [open, setOpen] = useState(false);
 
-    const scrollAboutMe = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 0);
-        if (window.innerWidth <= 768) {
-            setOpen(!open);
-            window.scrollTo(0,0)
-        }
-    }
-
-    const scrollSkills = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 400);
-        if (window.innerWidth <= 768) {
-            setOpen(!open);
-            window.scrollTo(0,655)
-        }
-    }
-
-    const scrollProyects = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 980);
-        if (window.innerWidth <= 768) {
-            setOpen(!open);
-            window.scrollTo(0,1650)
-        }
-    }
-
-    const scrollContact = e => {
-        if (window.innerWidth > 768) return window.scrollTo(0, 2150);
-        if (window.innerWidth <= 768) {
-            setOpen(!open);
-            window.scrollTo(0,2650)
-        }
-
-    }
-
-
     return (
         <NavContainer>
             <div className={`bigBox ${open && 'active'}`}>
@@ -143,18 +116,26 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
                 </div>
 
                 <div className={`links ${open && 'active'}`}>
-                    <h4 id='about' onClick={scrollAboutMe}>
-                        {nav_text.about}
-                    </h4>
-                    <h4 id='skills' onClick={scrollSkills}>
-                        {nav_text.skills}
-                    </h4>
-                    <h4 id='proyects' onClick={scrollProyects}>
-                        {nav_text.proyects}
-                    </h4>
-                    <h4 id='contact' onClick={scrollContact}>
-                        {nav_text.contact}
-                    </h4>
+                    <a href='#about' onClick={() => setOpen(false)}>
+                        <h4 >
+                            {nav_text.about}
+                        </h4>
+                    </a>
+                    <a href="#skills">
+                        <h4 onClick={() => setOpen(false)}>
+                            {nav_text.skills}
+                        </h4>
+                    </a>
+                    <a href="#proyects">
+                        <h4 onClick={() => setOpen(false)}>
+                            {nav_text.proyects}
+                        </h4>
+                    </a>
+                    <a href="#contact">
+                        <h4 onClick={() => setOpen(false)}>
+                            {nav_text.contact}
+                        </h4>
+                    </a>
                 </div>
 
                 <div className={`box ${open && 'active'}`}>

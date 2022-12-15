@@ -21,6 +21,9 @@ const SkillsContainer = styled.div`
     .text {
       display: flex;
       flex-direction: column; 
+      h2 {
+        padding-top: 4rem;
+      }
       .box {
         display: flex;
         gap: 5rem;
@@ -48,7 +51,7 @@ export const Skills = ({ language }) => {
   return (
     <SkillsContainer>
       <div className='text'>
-        <div><h2><strong>{skills_text}:</strong></h2></div>
+        <div><h2 id='skills'><strong>{skills_text}:</strong></h2></div>
       </div>
       <div className='skills'>
         {
