@@ -8,6 +8,7 @@ import { MenuIcon } from './MenuIcon';
 const NavContainer = styled.div`
     a {
         text-decoration: none;
+        color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
         &:visited {
             text-decoration: none;
             color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
