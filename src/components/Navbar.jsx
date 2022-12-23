@@ -4,6 +4,7 @@ import sun_logo from '../images/sun-logo.svg';
 import moon_logo from '../images/moon-logo.svg';
 import { selectLanguage } from '../Languages';
 import { MenuIcon } from './MenuIcon';
+import select_arrow from '../images/select-arrow.svg';
 
 const NavContainer = styled.div`
     a {
@@ -50,15 +51,24 @@ const NavContainer = styled.div`
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        select {
+            appearance: none;
+            background-image: url(${select_arrow});
+            background-position: right 0.5em top 50%;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            padding-right: 50px;
+            margin-right: 1rem;
+        }
         img {
             height: auto;
             width: 50px;
             &:hover {
                 cursor: pointer;
             }
-        }
-        select {
-            margin-right: 1rem;
         }
     }
     .box.active {
@@ -101,7 +111,6 @@ const NavContainer = styled.div`
     .menu.active {
         grid-area: 1 / 1 / 2 / 2;
     }
-    
 `
 
 export const Navbar = ({ handleClick, handleSelect, language }) => {
@@ -144,14 +153,12 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
                     <div>
                         <img src={localStorage.theme === 'primary' ? sun_logo : moon_logo} alt='error' onClick={handleClick} />
                     </div>
-                    <select name="language" id="" onChange={handleSelect}>
-                        <option value="en">EN</option>
-                        <option value="esp">ESP</option>
+                    <select name="language" id="" value={localStorage.language} onChange={handleSelect}>
+                        <option value="en" selected={localStorage.language === "en"}>EN</option>
+                        <option value="esp" selected={localStorage.language === "esp"}>ES</option>
                     </select>
                 </div>
             </div>
-
-
         </NavContainer>
     )
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import photo from '../images/photo.png';
 import download_logo from '../images/download-logo.svg';
 import { selectLanguage } from '../Languages';
 import my_cv from '../pdf/Miqueas-Ledesma.pdf';
+import Typed from 'typed.js';
 
 const BodyContainer = styled.div`
     padding-top: 100px;
@@ -51,7 +52,7 @@ const BodyContainer = styled.div`
                 text-decoration: none;
                 color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
             }
-            p{
+            p {
                 width: 25rem;
                 @media screen and (max-width:768px){
                     width: 90%;
@@ -77,20 +78,36 @@ const BodyContainer = styled.div`
 `
 
 export const Presentation = ({ language }) => {
-    const { body_text } = selectLanguage(language)
+    const { body_text } = selectLanguage(language);
+
+    useEffect(() => {
+        const typed = new Typed('p', {
+            strings: ['', body_text.text],
+            typeSpeed: 90,
+            showCursor: false,
+        });
+
+        return () => {
+            typed.destroy();
+        };
+    }, [localStorage.language]);
+
     return (
-        <BodyContainer id='about'>
-            <div className='box'>
-                <div className='portrait'>
+        <BodyContainer id="about">
+            <div className="box">
+                <div className="portrait">
                     <img src={photo} alt="error" />
                 </div>
 
-                <div className='text'>
+                <div className="text">
                     <h2>{body_text.title}</h2>
-                    <p>{body_text.text}</p>
-                    <a href={my_cv} download><span>Download CV</span><img src={download_logo} alt="error" /></a>
+                    <p></p>
+                    <a href={my_cv} download>
+                        <span>Download CV</span>
+                        <img src={download_logo} alt="error" />
+                    </a>
                 </div>
             </div>
         </BodyContainer>
-    )
-}
+    );
+};

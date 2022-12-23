@@ -7,7 +7,7 @@ export const language = {
         },
         body_text: {
             title: `Hola, soy Miqueas Ledesma`,
-            text: 'Un desarrollador fullstack en constante formación, recientemente finalice el bootcamp soy Henry donde realice proyectos tanto grupales como individuales.'
+            text: 'Un desarrollador full stack en constante formación, recientemente finalice el bootcamp soy Henry donde realice proyectos tanto grupales como individuales.'
         },
         nav_text: {
             skills: 'Habilidades',
@@ -32,7 +32,7 @@ export const language = {
         },
         body_text: {
             title: `Hi, I'm Miqueas Ledesma`,
-            text: `A fullstack developer in constant training, he recently finished the I'm Henry bootcamp where he carried out both group and individual projects.`
+            text: `A full stack developer in constant training, he recently finished the I'm Henry bootcamp where he carried out both group and individual projects.`
         },
         nav_text: {
             skills: 'Skills',
