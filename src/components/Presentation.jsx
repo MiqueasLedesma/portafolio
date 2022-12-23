@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { selectLanguage } from '../Languages';
+import { useSpring, animated } from '@react-spring/web';
 import styled from 'styled-components';
 import photo from '../images/photo.png';
 import download_logo from '../images/download-logo.svg';
-import { selectLanguage } from '../Languages';
 import my_cv from '../pdf/Miqueas-Ledesma.pdf';
 import Typed from 'typed.js';
+
 
 const BodyContainer = styled.div`
     padding-top: 100px;
@@ -80,10 +82,22 @@ const BodyContainer = styled.div`
 export const Presentation = ({ language }) => {
     const { body_text } = selectLanguage(language);
 
+    const fadeIn = useSpring({
+        from: { opacity: 0, transform: 'translateX(-100%)' },
+        to: { opacity: 1, transform: 'translateX(0)' },
+        delay: 500,
+    });
+
+    const fadeInH2 = useSpring({
+        from: { opacity: 0, transform: 'translateX(100%)' },
+        to: { opacity: 1, transform: 'traslateX(0)' },
+        delay: 100,
+    });
+
     useEffect(() => {
         const typed = new Typed('p', {
             strings: ['', body_text.text],
-            typeSpeed: 90,
+            typeSpeed: 30,
             showCursor: false,
         });
 
@@ -96,11 +110,11 @@ export const Presentation = ({ language }) => {
         <BodyContainer id="about">
             <div className="box">
                 <div className="portrait">
-                    <img src={photo} alt="error" />
+                    <animated.img src={photo} alt="loading..." style={fadeIn} />
                 </div>
 
                 <div className="text">
-                    <h2>{body_text.title}</h2>
+                    <animated.h2 style={fadeInH2}>{body_text.title}</animated.h2>
                     <p></p>
                     <a href={my_cv} download>
                         <span>Download CV</span>

@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
 
     const setLocalStorage = () => {
-      !state && localStorage.setItem('theme', 'primary');
+      !state && localStorage.setItem('theme', 'secundary');
       !lang && localStorage.setItem('language', 'en');
     }
     setLocalStorage();

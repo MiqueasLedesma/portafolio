@@ -14,7 +14,7 @@ const SkillsContainer = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: ${props => localStorage.theme != 'primary' ? props.theme.textSecundary : props.theme.textPrimary};
+    color: ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
     @media screen and (max-width:768px){
       height: 60rem;
     }
