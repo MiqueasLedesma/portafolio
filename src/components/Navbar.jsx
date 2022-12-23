@@ -119,6 +119,13 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
 
     const [open, setOpen] = useState(false);
 
+    const handleNav = e => {
+        e.preventDefault();
+        let element = document.getElementById(e.target.parentElement.dataset.id);
+        element.scrollIntoView();
+        setOpen(false);
+    };
+
     return (
         <NavContainer>
             <div className={`bigBox ${open && 'active'}`}>
@@ -127,23 +134,23 @@ export const Navbar = ({ handleClick, handleSelect, language }) => {
                 </div>
 
                 <div className={`links ${open && 'active'}`}>
-                    <a href='#about' onClick={() => setOpen(false)}>
+                    <a href='#about' data-id='about' onClick={handleNav}>
                         <h4 >
                             {nav_text.about}
                         </h4>
                     </a>
-                    <a href="#skills">
-                        <h4 onClick={() => setOpen(false)}>
+                    <a href="#skills" data-id='skills' onClick={handleNav}>
+                        <h4>
                             {nav_text.skills}
                         </h4>
                     </a>
-                    <a href="#proyects">
-                        <h4 onClick={() => setOpen(false)}>
+                    <a href="#proyects" data-id='proyects' onClick={handleNav}>
+                        <h4 >
                             {nav_text.proyects}
                         </h4>
                     </a>
-                    <a href="#contact">
-                        <h4 onClick={() => setOpen(false)}>
+                    <a href="#contact" data-id='contact' onClick={handleNav}>
+                        <h4>
                             {nav_text.contact}
                         </h4>
                     </a>
