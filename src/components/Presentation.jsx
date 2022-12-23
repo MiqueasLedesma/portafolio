@@ -85,19 +85,20 @@ export const Presentation = ({ language }) => {
     const fadeIn = useSpring({
         from: { opacity: 0, transform: 'translateX(-100%)' },
         to: { opacity: 1, transform: 'translateX(0)' },
-        delay: 500,
+        delay: 800,
     });
 
     const fadeInH2 = useSpring({
         from: { opacity: 0, transform: 'translateX(100%)' },
         to: { opacity: 1, transform: 'traslateX(0)' },
-        delay: 100,
+        delay: 300,
     });
 
     useEffect(() => {
         const typed = new Typed('p', {
             strings: ['', body_text.text],
             typeSpeed: 30,
+            startDelay: 500,
             showCursor: false,
         });
 
