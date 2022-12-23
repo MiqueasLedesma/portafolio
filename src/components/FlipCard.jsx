@@ -41,7 +41,7 @@ export const FlipCard = ({ img, text }) => {
     return (
         <ReactCardFlip isFlipped={state}>
             <FrontCardContainer onClick={() => setState(!state)} >
-                <img src={img} alt="loadging..." data-bs-toggle="tooltip" data-bs-placement="top" title={text} />
+                <img src={img} alt="loading..." data-bs-toggle="tooltip" data-bs-placement="top" title={text} />
             </FrontCardContainer>
 
             <BackCardContainer onClick={() => setState(!state)}>
