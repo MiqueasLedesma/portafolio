@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { selectLanguage } from '../Languages';
 import { useSpring, animated } from '@react-spring/web';
 import styled from 'styled-components';
-import photo from '../images/photo.png';
+import photo from '../images/presentation-logo.svg';
 import download_logo from '../images/download-logo.svg';
 import my_cv from '../pdf/Miqueas-Ledesma.pdf';
 import Typed from 'typed.js';
@@ -25,10 +25,10 @@ const BodyContainer = styled.div`
         width: fit-content;
         height: fit-content;
         img {
-            box-shadow: 0 0 2px 2px black;
+            /* box-shadow: 0 0 2px 2px black; */
             width: 200px;
-            border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary};
-            border-radius: 10px;
+            /* border: 2px solid ${props => localStorage.theme == 'primary' ? props.theme.textPrimary : props.theme.textSecundary}; */
+            /* border-radius: 10px; */
         }
         @media screen and (max-width:768px){
             display: flex;
